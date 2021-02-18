@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BDl-Ga-zOe">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--True Table View Controller-->
+        <scene sceneID="Cy6-lb-Aj4">
+            <objects>
+                <tableViewController storyboardIdentifier="table_view" id="lDe-70-7dq" customClass="TrueTableViewController" customModule="Scan_To_Cost_Progress" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7ep-Ub-1mX">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" textLabel="G8F-FN-OgQ" style="IBUITableViewCellStyleDefault" id="5AZ-zh-jt9">
+                                <rect key="frame" x="0.0" y="28" width="1194" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5AZ-zh-jt9" id="Zxe-uA-FyW">
+                                    <rect key="frame" x="0.0" y="0.0" width="1194" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G8F-FN-OgQ">
+                                            <rect key="frame" x="20" y="0.0" width="1154" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="lDe-70-7dq" id="JgT-GE-ARu"/>
+                            <outlet property="delegate" destination="lDe-70-7dq" id="K36-av-Oz1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8A-8n-T3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-610"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="action_vc" id="BV1-FR-VrT" customClass="ViewController" customModule="Scan_To_Cost_Progress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="814"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-Cu-Mgm" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="994" y="724" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ixx-mw-qkS"/>
+                                    <constraint firstAttribute="width" constant="150" id="WuP-wA-COw"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="Reset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NQo-I0-1M1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-4A-6sY" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="994" y="654" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9us-LY-Y40"/>
+                                    <constraint firstAttribute="height" constant="40" id="WFX-BB-EdX"/>
+                                </constraints>
+                                <state key="normal" title="Incl. Height:"/>
+                                <connections>
+                                    <action selector="IncludingHeight:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YRG-Kj-AyR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHb-Nw-55b" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="50" y="724" width="190" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K5l-n3-zNf"/>
+                                    <constraint firstAttribute="width" constant="190" id="ujv-lI-HR8"/>
+                                </constraints>
+                                <state key="normal" title="Start Plane Detection"/>
+                                <connections>
+                                    <action selector="TogglePlaneDetection:" destination="BV1-FR-VrT" eventType="touchUpInside" id="eKh-XL-sOK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpY-0a-raO" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="270" y="724" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7oA-au-aUL"/>
+                                    <constraint firstAttribute="height" constant="40" id="WtD-uw-0K0"/>
+                                </constraints>
+                                <state key="normal" title="Height:"/>
+                                <connections>
+                                    <action selector="roomheightpressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="hHD-F0-Frg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwJ-QL-CBf" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="450" y="724" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bsn-7n-x8G"/>
+                                    <constraint firstAttribute="width" constant="150" id="jaj-jy-GTU"/>
+                                </constraints>
+                                <state key="normal" title="Total:"/>
+                                <connections>
+                                    <action selector="TotalArea:" destination="BV1-FR-VrT" eventType="touchUpInside" id="rCX-gJ-64w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-8q-bSg" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="994" y="584" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9rk-13-wZa"/>
+                                    <constraint firstAttribute="height" constant="40" id="dnK-yl-hBs"/>
+                                </constraints>
+                                <state key="normal" title="Costs:"/>
+                                <connections>
+                                    <action selector="TotalCosts:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Sfq-sU-fAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Ui-uNY" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="994" y="30" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="44U-Mn-n5e"/>
+                                    <constraint firstAttribute="height" constant="40" id="k2H-wj-3O6"/>
+                                </constraints>
+                                <state key="normal" title="Table"/>
+                                <connections>
+                                    <action selector="TableCosts:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TaY-F9-TgW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-x2-Qau" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="994" y="100" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IkK-sY-Vf3"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ofu-v7-EOx"/>
+                                </constraints>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="CSVExport:" destination="BV1-FR-VrT" eventType="touchUpInside" id="a6f-ld-G1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYp-gc-PNj" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="50" y="30" width="190" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="1uk-IJ-Uj0"/>
+                                    <constraint firstAttribute="height" constant="40" id="Iwy-No-Ame"/>
+                                </constraints>
+                                <state key="normal" title="Need: High"/>
+                                <connections>
+                                    <action selector="StandardSwitch:" destination="BV1-FR-VrT" eventType="touchUpInside" id="G0K-up-ekg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dYp-gc-PNj" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="50" id="07c-aA-QbO"/>
+                            <constraint firstItem="dYp-gc-PNj" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="30" id="1lc-R3-g1D"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="9yD-Cu-Mgm" secondAttribute="bottom" constant="50" id="2nk-X6-JLZ"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="Lbv-4A-6sY" secondAttribute="trailing" constant="50" id="GF4-cB-wlz"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="VpY-0a-raO" firstAttribute="leading" secondItem="vHb-Nw-55b" secondAttribute="trailing" constant="30" id="H9o-YQ-ZC8"/>
+                            <constraint firstItem="Lbv-4A-6sY" firstAttribute="top" secondItem="Ix2-8q-bSg" secondAttribute="bottom" constant="30" id="OGs-OH-kAz"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="CBC-Ui-uNY" secondAttribute="trailing" constant="50" id="QKq-XZ-Sjm"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="mwJ-QL-CBf" secondAttribute="bottom" constant="50" id="QMO-Kn-hey"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="9yD-Cu-Mgm" secondAttribute="trailing" constant="50" id="Vxa-58-gYY"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="UcH-x2-Qau" secondAttribute="trailing" constant="50" id="WYJ-0J-alF"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="CBC-Ui-uNY" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="30" id="Z8L-Gv-mK8"/>
+                            <constraint firstItem="9yD-Cu-Mgm" firstAttribute="top" secondItem="Lbv-4A-6sY" secondAttribute="bottom" constant="30" id="aBO-R1-apv"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="vHb-Nw-55b" secondAttribute="bottom" constant="50" id="bfo-40-pkO"/>
+                            <constraint firstItem="UcH-x2-Qau" firstAttribute="top" secondItem="CBC-Ui-uNY" secondAttribute="bottom" constant="30" id="eWm-dx-jHk"/>
+                            <constraint firstItem="vHb-Nw-55b" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="50" id="hRM-HL-avX"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="VpY-0a-raO" secondAttribute="bottom" constant="50" id="kY8-lB-uTx"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="Ix2-8q-bSg" secondAttribute="trailing" constant="50" id="t3h-Vi-Vdt"/>
+                            <constraint firstItem="mwJ-QL-CBf" firstAttribute="leading" secondItem="VpY-0a-raO" secondAttribute="trailing" constant="30" id="x18-RC-5YE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CSVExport" destination="UcH-x2-Qau" id="I9h-mh-llP"/>
+                        <outlet property="Reset" destination="9yD-Cu-Mgm" id="ari-7s-SzS"/>
+                        <outlet property="StandardSwitch" destination="dYp-gc-PNj" id="WEp-le-xtF"/>
+                        <outlet property="StartPlaneDetection" destination="vHb-Nw-55b" id="FxS-Uh-5vj"/>
+                        <outlet property="TableCosts" destination="CBC-Ui-uNY" id="te0-LF-OZr"/>
+                        <outlet property="TotalArea" destination="mwJ-QL-CBf" id="MaH-8F-bD5"/>
+                        <outlet property="TotalCosts" destination="Ix2-8q-bSg" id="65x-wd-1Np"/>
+                        <outlet property="includingHeight" destination="Lbv-4A-6sY" id="9bF-p0-vg9"/>
+                        <outlet property="roomheightbutton" destination="VpY-0a-raO" id="5cR-25-vOO"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.79941434846265" y="52.734375"/>
+        </scene>
+        <!--Title View Controller-->
+        <scene sceneID="YCh-vo-lcv">
+            <objects>
+                <viewController storyboardIdentifier="Title_vc" id="BDl-Ga-zOe" customClass="TitleViewController" customModule="Scan_To_Cost_Progress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qCs-WO-K5q">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL9-R2-QJl" customClass="RoundedButton" customModule="Scan_To_Cost_Progress" customModuleProvider="target">
+                                <rect key="frame" x="522" y="724" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LBm-s5-80R"/>
+                                    <constraint firstAttribute="width" constant="150" id="UYZ-wr-s6L"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartAction:" destination="BDl-Ga-zOe" eventType="touchUpInside" id="YFn-cc-AnN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w00-ke-8zA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LL9-R2-QJl" firstAttribute="leading" secondItem="w00-ke-8zA" secondAttribute="leading" constant="522" id="QXp-Ee-zIy"/>
+                            <constraint firstItem="w00-ke-8zA" firstAttribute="bottom" secondItem="LL9-R2-QJl" secondAttribute="bottom" constant="50" id="ppU-g3-hLt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="StartButrron" destination="LL9-R2-QJl" id="Far-30-PCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtA-ia-j9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="706"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="9yD-Cu-Mgm">
+            <size key="intrinsicContentSize" width="39" height="30"/>
+        </designable>
+        <designable name="CBC-Ui-uNY">
+            <size key="intrinsicContentSize" width="37" height="30"/>
+        </designable>
+        <designable name="Ix2-8q-bSg">
+            <size key="intrinsicContentSize" width="44" height="30"/>
+        </designable>
+        <designable name="LL9-R2-QJl">
+            <size key="intrinsicContentSize" width="34" height="30"/>
+        </designable>
+        <designable name="Lbv-4A-6sY">
+            <size key="intrinsicContentSize" width="82" height="30"/>
+        </designable>
+        <designable name="UcH-x2-Qau">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="VpY-0a-raO">
+            <size key="intrinsicContentSize" width="50" height="30"/>
+        </designable>
+        <designable name="dYp-gc-PNj">
+            <size key="intrinsicContentSize" width="77" height="30"/>
+        </designable>
+        <designable name="mwJ-QL-CBf">
+            <size key="intrinsicContentSize" width="38" height="30"/>
+        </designable>
+        <designable name="vHb-Nw-55b">
+            <size key="intrinsicContentSize" width="147" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
